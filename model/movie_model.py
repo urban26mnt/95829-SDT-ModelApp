@@ -31,11 +31,11 @@ class RatingModel():
         sentiment_prediction = self.nb_model.predict_proba(vectorized_review)
         
         # Print the predicted sentiment
-        if sentiment_prediction[0][0] > 0.6:
+        if sentiment_prediction[0][1] > 0.6:
             sentiment = 'positive'
         else:
             sentiment = 'negative'
         
-        eval = {'input_str': user_input, 'sentiment': sentiment, 'predict_proba': sentiment_prediction[0][0]}
+        eval = {'input_str': user_input, 'sentiment': sentiment, 'predict_proba': sentiment_prediction[0][1]}
 
         return eval
