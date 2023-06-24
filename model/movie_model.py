@@ -17,10 +17,10 @@ from sklearn.metrics import accuracy_score
 
 class RatingModel():
     """Class to evaluate reviews using the movie model"""
-    def __init__(self):
+    # def __init__(self):
         # Load model and vectorizer
-        self.nb_model = pickle.load(open(r'model\nb_model.pkl','rb'))
-        self.nb_vectorizer = pickle.load(open(r'model\nb_vectorizer.pkl','rb'))
+    nb_model = pickle.load(open(r'model\nb_model.pkl','rb'))
+    nb_vectorizer = pickle.load(open(r'model\nb_vectorizer.pkl','rb'))
 
     def eval(self, user_input):
         """Default query to evaluate a submitted review"""
