@@ -9,7 +9,7 @@ __license__ = "GNU GPL3"
 # imports
 import json
 from flask import Flask, request, render_template
-from application.movie_model import RatingModel
+from model.movie_model import RatingModel
 
 app = Flask(__name__)
 
@@ -24,7 +24,7 @@ def api_homepage():
 @app.route('/api/eval', methods=['GET', 'POST'])
 def upload():
     eval = rating_model.eval(json.loads(request.json))
-    """POST/PUT upload/update data in the database."""
+    """GET/POST upload/update data in the database."""
     
     if eval is None:
         response = app.make_response(('Bad request. Could not parse.', 400))
