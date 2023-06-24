@@ -36,6 +36,6 @@ class RatingModel():
         else:
             sentiment = 'negative'
         
-        eval = {'input_str': user_input, 'sentiment': sentiment, 'predict_proba': sentiment_prediction[0]}
+        eval = {'input_str': user_input, 'sentiment': sentiment, 'predict_proba': sentiment_prediction[0][0]}
 
         return eval
