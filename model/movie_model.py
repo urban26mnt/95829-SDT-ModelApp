@@ -20,7 +20,7 @@ class RatingModel():
     # def __init__(self):
         # Load model and vectorizer
     nb_model = pickle.load(open(r'nb_model.pkl','rb'))
-    nb_vectorizer = pickle.load(open(r'.nb_vectorizer.pkl','rb'))
+    nb_vectorizer = pickle.load(open(r'nb_vectorizer.pkl','rb'))
 
     def eval(self, user_input):
         """Default query to evaluate a submitted review"""
